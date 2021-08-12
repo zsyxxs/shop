@@ -23,6 +23,7 @@ $api = app('Dingo\Api\Routing\Router');
 $api->version('v1',['namespace' => 'App\Http\Controllers\Api\V1'],function($api){
 
     $api->any('login','UsersController@login');
+    $api->any('login1','UsersController@login');
 
     $api->group(['middleware' => 'refresh.token'],function($api){
         //测试是否携带token
